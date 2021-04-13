@@ -1,0 +1,22 @@
+{
+  "name": "generative-processing",
+  "version": "1.0.0",
+  "description": "Intro to generative art with tweakable sketches in p5.js",
+  "main": "sketches/base.js",
+  "devDependencies": {
+    "browser-sync": "^2.26.14"
+  },
+  "scripts": {
+    "start": "browser-sync start --server -f -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/plusk/generative-workshop.git"
+  },
+  "author": "",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/plusk/generative-workshop/issues"
+  },
+  "homepage": "https://github.com/plusk/generative-workshop#readme"
+}
