@@ -17,7 +17,11 @@ The sketches are listed here in ascending complexity:
 - **layers.js** makes a blobby shape with Perlin noise, coloring the layers of the blob with a gradient
 - **perlin.js** moves tiny lines over a Perlin noise flow field, adjusting the angle of the movement with the value of the noise
 
-Each sketch has around 10-50 lines of config at the top of the file where parameters can be tweaked to your liking. You don't need to understand the code underneath the config to play around with the sketches, but you're free to explore to your heart's content!
+Each sketch has around 10-50 lines of config at the top of the file where parameters can be tweaked to your liking. You don't need to understand the code underneath the config to play around with the sketches, but you're free to explore to your heart's content! Don't be afraid to change the code itself if you want it to behave differently.
+
+## Color palettes
+
+Lines 7 and 8 of every sketch decides which color palette will be used. You can see a list of all the palettes in the file called `palettes.json`. If `RANDOM_PALETTE` is set to `true` then you can see which palette is currently in use by opening the console in [Chrome DevTools](https://developer.chrome.com/docs/devtools/open/) or [Firefox Developer Tools](https://developer.mozilla.org/en-US/docs/Tools), depending on which browser you prefer. This can be useful if you try out random palettes and see one you like, and you want to use that one specifically.
 
 ## Bonus
 
