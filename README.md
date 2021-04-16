@@ -18,3 +18,7 @@ The sketches are listed here in ascending complexity:
 - **perlin.js** moves tiny lines over a Perlin noise flow field, adjusting the angle of the movement with the value of the noise
 
 Each sketch has around 10-50 lines of config at the top of the file where parameters can be tweaked to your liking. You don't need to understand the code underneath the config to play around with the sketches, but you're free to explore to your heart's content!
+
+## Bonus
+
+If you want more sketches to play around with, you could go to my [main repository](https://github.com/plusk/generative-processing), but keep in mind that not all the sketches therein are completed, documented, or even functional.
