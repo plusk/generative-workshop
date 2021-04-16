@@ -68,7 +68,9 @@ function setup() {
   const PALETTE = !RANDOM_PALETTE
     ? PALETTES[PALETTE_NAME]
     : PALETTES[RANDOM_PALETTE_NAME];
-  console.log("Palette name: ", RANDOM_PALETTE_NAME);
+  if (RANDOM_PALETTE) {
+    console.log("Palette name: ", RANDOM_PALETTE_NAME);
+  }
 
   colorMode(HSL);
   COLORS = PALETTE["colors"].map((col) => color(col));
