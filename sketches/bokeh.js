@@ -87,30 +87,28 @@ function draw() {
 }
 
 function drawRandomShape(x, y, size) {
-  /* Move to the given coordinates in order to rotate properly */
-  translate(x, y);
-  rotate(random(TWO_PI));
-
   /* Select a shape and draw it */
   const shape = random(WEIGHTED_SHAPES);
   if (shape == "CIRCLE") {
     circle(x, y, size);
-  } else if (shape == "SQUARE") {
-    square(x, y, size);
   } else if (shape == "TRIANGLE") {
-    drawTriangle(x, y, size);
+    drawPolygon(3, x, y, size);
+  } else if (shape == "SQUARE") {
+    drawPolygon(4, x, y, size);
   }
 }
 
-/* Draw an equilateral triangle */
-function drawTriangle(x, y, size) {
-  const x1 = x + (cos((1 * TWO_PI) / 3) * size) / 2;
-  const y1 = y + (sin((1 * TWO_PI) / 3) * size) / 2;
-  const x2 = x + (cos((2 * TWO_PI) / 3) * size) / 2;
-  const y2 = y + (sin((2 * TWO_PI) / 3) * size) / 2;
-  const x3 = x + (cos((3 * TWO_PI) / 3) * size) / 2;
-  const y3 = y + (sin((3 * TWO_PI) / 3) * size) / 2;
-  triangle(x1, y1, x2, y2, x3, y3);
+/* Draw a polygon at (cx, cy) with p amount of points */
+function drawPolygon(p, cx, cy, size) {
+  beginShape();
+  const randomRotation = random(TWO_PI);
+  for (let i = 1; i <= p; i++) {
+    vertex(
+      cx + (cos(randomRotation + (i * TWO_PI) / p) * size) / 2,
+      cy + (sin(randomRotation + (i * TWO_PI) / p) * size) / 2
+    );
+  }
+  endShape(CLOSE);
 }
 
 function clickOnSave() {
