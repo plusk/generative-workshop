@@ -27,7 +27,7 @@ const CAP_LIGHTNESS = true;
 const NOISE_MULTIPLIER = 0.2;
 
 /* The speed at which the layers */
-const NOISE_SPEED = 0.005;
+const NOISE_SPEED = 0.00375;
 
 /* Mirror the layers on either axis */
 const SYMMETRICAL_X = false;

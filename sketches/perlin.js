@@ -17,14 +17,14 @@ const WALKER_COUNT = 500;
 /* The smoothness of the noise, makes a big difference */
 /* Lower values result in more gradual angle adjustments, a bit like zooming in */
 /* Higher values will lead to often more jagged lines, walkers gathering up more */
-const NOISE_ZOOM = inverseSize(0.002);
+const NOISE_ZOOM = inverseSize(0.0015);
 
 /* Disabling means every walker will have its own color */
 /* Enable to color the walkers based on their location / angle */
 /* Matching the stroke noise with the noise zoom make them mostly aligned */
 /* However, making the noise zooms slightly different offer more layered textures */
 const NOISED_STROKE = true;
-const STROKE_NOISE_ZOOM = inverseSize(0.0025);
+const STROKE_NOISE_ZOOM = inverseSize(0.015);
 
 /* The amount of steps a walker will take before being respawned */
 /* Longer steps will often lead to being able to gather more */
@@ -43,7 +43,7 @@ const CLIP_RADIUS = size(300);
 /* Enable to round angles to their nearest ANGLE_STEP */
 /* This effectively divides the flow field into angles based */
 const ROUNDED_ANGLES = false;
-const ANGLE_STEP = Math.PI / 3;
+const ANGLE_STEP = Math.PI / 2;
 
 /* Noise will naturally lean towards an angle */
 /* Enable this to vary where the angle is, or disable and specify your own */
