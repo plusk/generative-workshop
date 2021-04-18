@@ -5,7 +5,7 @@ const PRINT_MODE = false;
 
 /* Get a random palette or choose a specific one from palettes.json */
 const RANDOM_PALETTE = false;
-const PALETTE_NAME = "mono";
+const PALETTE_NAME = "monowild";
 
 /* Choose a random color from the palette for each line */
 const RANDOM_STROKE = false;
@@ -14,7 +14,7 @@ const RANDOM_STROKE = false;
 const PALETTED_STROKE = false;
 
 /* How big the circle will be */
-const RADIUS = 400;
+const RADIUS = size(300);
 
 /* How many independent lines will be drawn each frame */
 const LINE_COUNT = 5;
@@ -25,7 +25,7 @@ const NOISE_SPEED = 0.05;
 /* How opaque the lines will be, lower means more transparent */
 /* Lower will be smoother, but also takes longer to fill the circle */
 const OPACITY = 0.1;
-const STROKE_WEIGHT = 1;
+const STROKE_WEIGHT = size(1);
 
 /* Enable to use randomness instead of noise to select line locations */
 /* This effectively overrides the remaining config */
@@ -49,12 +49,17 @@ const NOISE_RANDOMNESS = 0.75;
 
 */
 
+// Helper function to scale sizes with print mode
+function size(original) {
+  return PRINT_MODE ? (original * 4960) / 1000 : original;
+}
+
 function preload() {
   PALETTES = loadJSON("/palettes.json");
 }
 
 function setup() {
-  const cnv = PRINT_MODE ? createCanvas(4960, 7016) : createCanvas(1080, 1350);
+  const cnv = PRINT_MODE ? createCanvas(4960, 7016) : createCanvas(1000, 1000);
   cnv.mouseClicked(clickOnSave);
   pixelDensity(1);
 

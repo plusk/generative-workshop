@@ -10,11 +10,11 @@ const PALETTE_NAME = "stronk";
 const LAYER_COUNT = 10;
 
 /* The average radius of the full shape */
-const MEAN_RADIUS = 500;
+const MEAN_RADIUS = size(600);
 
 /* Enable strokes on the border of each layer, specify weight if enabled */
 const HAS_STROKE = false;
-const STROKE_WEIGHT = 1;
+const STROKE_WEIGHT = size(1);
 
 /* Layers are light to dark (from the center), enable to reverse it */
 const INVERTED_GRADIENT = true;
@@ -52,12 +52,17 @@ const ROTATION_SPEED = 0.001;
 
 */
 
+// Helper function to scale sizes with print mode
+function size(original) {
+  return PRINT_MODE ? (original * 4960) / 1000 : original;
+}
+
 function preload() {
   PALETTES = loadJSON("/palettes.json");
 }
 
 function setup() {
-  const cnv = PRINT_MODE ? createCanvas(4960, 7016) : createCanvas(1080, 1350);
+  const cnv = PRINT_MODE ? createCanvas(4960, 7016) : createCanvas(1000, 1000);
   cnv.mouseClicked(clickOnSave);
   pixelDensity(1);
 

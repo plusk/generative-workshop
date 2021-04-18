@@ -7,6 +7,10 @@
     "bg": "#333333",
     "colors": ["#FFFFFF"]
   },
+  "monowild": {
+    "bg": "#333333",
+    "colors": ["#FAEBD7"]
+  },
   "onom": {
     "bg": "#FAEBD7",
     "colors": ["#000000"]

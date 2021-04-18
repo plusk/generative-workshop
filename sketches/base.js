@@ -7,8 +7,8 @@ const PRINT_MODE = false;
 const RANDOM_PALETTE = false;
 const PALETTE_NAME = "stronk";
 
-const STROKE_WEIGHT = 20;
-const DIAMETER = 400;
+const STROKE_WEIGHT = size(10);
+const DIAMETER = size(300);
 
 /*
 
@@ -16,12 +16,17 @@ const DIAMETER = 400;
 
 */
 
+// Helper function to scale sizes with print mode
+function size(original) {
+  return PRINT_MODE ? (original * 4960) / 1000 : original;
+}
+
 function preload() {
   PALETTES = loadJSON("palettes.json");
 }
 
 function setup() {
-  const cnv = PRINT_MODE ? createCanvas(4960, 7016) : createCanvas(1080, 1350);
+  const cnv = PRINT_MODE ? createCanvas(4960, 7016) : createCanvas(1000, 1000);
   cnv.mouseClicked(clickOnSave);
   pixelDensity(1);
 
@@ -42,14 +47,14 @@ function setup() {
 
   /* Sketch-specific setup */
   strokeWeight(STROKE_WEIGHT);
-  stroke(random(COLORS));
+  //stroke(random(COLORS));
   fill(random(COLORS));
   background(BG);
 }
 
 function draw() {
-  /* Inspiration can be found here! https://p5js.org/examples/ */
-  /* Documentation can be found here! https://p5js.org/reference/*/
+  /* Inspiration can be found here: https://p5js.org/examples/ */
+  /* Documentation can be found here: https://p5js.org/reference/*/
   circle(width / 2, height / 2, DIAMETER);
 }
 

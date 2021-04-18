@@ -7,7 +7,7 @@ const PRINT_MODE = false;
 const RANDOM_PALETTE = false;
 const PALETTE_NAME = "symmeblu";
 
-const STROKE_WEIGHT = 2;
+const STROKE_WEIGHT = size(2);
 const OPACITY = 1;
 
 /* The amount of walkers that will be actively drawing each frame */
@@ -17,14 +17,14 @@ const WALKER_COUNT = 500;
 /* The smoothness of the noise, makes a big difference */
 /* Lower values result in more gradual angle adjustments, a bit like zooming in */
 /* Higher values will lead to often more jagged lines, walkers gathering up more */
-const NOISE_ZOOM = 0.002;
+const NOISE_ZOOM = inverseSize(0.002);
 
 /* Disabling means every walker will have its own color */
 /* Enable to color the walkers based on their location / angle */
 /* Matching the stroke noise with the noise zoom make them mostly aligned */
 /* However, making the noise zooms slightly different offer more layered textures */
 const NOISED_STROKE = true;
-const STROKE_NOISE_ZOOM = 0.0025;
+const STROKE_NOISE_ZOOM = inverseSize(0.0025);
 
 /* The amount of steps a walker will take before being respawned */
 /* Longer steps will often lead to being able to gather more */
@@ -38,7 +38,7 @@ const STEP_SIZE = STROKE_WEIGHT + 1;
 /* Enable to clip the flow field by adding a big circle on it */
 /* Disabling reveals the flow field of the full canvas */
 const CLIP_CONTENT = true;
-const CLIP_RADIUS = 400;
+const CLIP_RADIUS = size(300);
 
 /* Enable to round angles to their nearest ANGLE_STEP */
 /* This effectively divides the flow field into angles based */
@@ -67,12 +67,21 @@ const DOT_LINES = false;
 
 const ACTIVE_WALKERS = [];
 
+// Helper function to scale sizes with print mode
+function size(original) {
+  return PRINT_MODE ? (original * 4960) / 1000 : original;
+}
+
+function inverseSize(original) {
+  return PRINT_MODE ? (original / 4960) * 1000 : original;
+}
+
 function preload() {
   PALETTES = loadJSON("/palettes.json");
 }
 
 function setup() {
-  const cnv = PRINT_MODE ? createCanvas(4960, 7016) : createCanvas(1080, 1350);
+  const cnv = PRINT_MODE ? createCanvas(4960, 7016) : createCanvas(1000, 1000);
   cnv.mouseClicked(clickOnSave);
   pixelDensity(1);
 

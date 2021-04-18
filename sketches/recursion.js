@@ -8,11 +8,11 @@ const RANDOM_PALETTE = false;
 const PALETTE_NAME = "symmeblu";
 
 /* The size of the recursion field */
-const SIZE = 800;
+const FIELD_SIZE = size(600);
 
 /* In addition to the thickness of spacing, adjusts maximum recursion depth */
 /* Scaling up the stroke weight would result in larger shapes overall */
-const STROKE_WEIGHT = 4;
+const STROKE_WEIGHT = size(3);
 
 /* Enable to set a stroke on each shape based on the background color */
 const HAS_STROKE = true;
@@ -44,12 +44,17 @@ const WEIGHTED_SHAPES = [];
 
 */
 
+// Helper function to scale sizes with print mode
+function size(original) {
+  return PRINT_MODE ? (original * 4960) / 1000 : original;
+}
+
 function preload() {
   PALETTES = loadJSON("/palettes.json");
 }
 
 function setup() {
-  const cnv = PRINT_MODE ? createCanvas(4960, 7016) : createCanvas(1080, 1350);
+  const cnv = PRINT_MODE ? createCanvas(4960, 7016) : createCanvas(1000, 1000);
   cnv.mouseClicked(clickOnSave);
   pixelDensity(1);
   frameRate(1);
@@ -92,7 +97,7 @@ function draw() {
 
   /* Start the recursion field */
   /* More fields can be placed by duplicating this line and changing positions */
-  step(0, width / 2, height / 2, SIZE);
+  step(0, width / 2, height / 2, FIELD_SIZE);
 }
 
 function step(currentDepth, x, y, r) {
