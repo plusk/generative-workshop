@@ -22,7 +22,7 @@ function size(original) {
 }
 
 function preload() {
-  PALETTES = loadJSON("palettes.json");
+  PALETTES = loadJSON("/palettes.json");
 }
 
 function setup() {

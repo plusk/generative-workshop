@@ -1,8 +1,6 @@
 ## Setup
 
-There are two ways to open up the sketches on your computer. The best way is to verify that you have npm installed by running `npm -v` in your terminal of choice. If npm is installed, simply run `npm install`, followed by `npm start`. Your browser should now pop up on http://localhost:3000/, and the sketch will automatically refresh when you change the code!
-
-If you don't have npm installed you may simply open index.html in your browser, but the sketch will not automatically refresh whenever you change the code.
+First you need the files for the workshop, which you can get by clicking the greeen "Code" dropdown and selecting "Download ZIP". After the folder is finished downloading, unzip the folder and open a terminal of your choice. Verify that you have npm installed by running `npm -v`. If npm is installed, simply run `npm install`, and when that is finished, run `npm start`. Your browser should now pop up on http://localhost:3000/, and the sketch will automatically refresh when you change the code!
 
 ## Tweaking the sketches
 
