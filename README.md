@@ -23,4 +23,24 @@ Lines 7 and 8 of every sketch decides which color palette will be used. You can 
 
 ## Bonus
 
+If you want to make sketches of your own, copy `base.js` and start writing your own code! Look to [some examples](https://p5js.org/examples/) and look through the [documentation](https://p5js.org/reference/) when in doubt. However, the most important part of making your own stuff is inspiration! Look at all the cool stuff other people make, then try to make it yourself. Here is some inspiration:
+
+Specific artists:
+- [Tyler Hobbs](https://www.instagram.com/tylerxhobbs/)
+- [Anders Hoff](https://inconvergent.net/)
+- [Matt DesLauriers](https://www.instagram.com/mattdesl_art/)
+- [gengeomergence](https://www.instagram.com/gengeomergence/)
+- [unordered.list](https://www.instagram.com/unordered.list/)
+- [Kenny Vaden](https://www.instagram.com/kenny.vaden/)
+- [Kjetil Golid](https://www.instagram.com/kgolid/)
+- [Caleb Ogg](https://www.instagram.com/iso.hedron/)
+- [shvembldr](https://www.instagram.com/shvembldr/)
+- [Yann Le Gall](https://www.instagram.com/ylegall/)
+- [geometrieva](https://www.instagram.com/geometrieva.stuff/)
+
+General inspo pages:
+- [/r/generative](Reddit) on Reddit
+- [#generativeart](https://www.instagram.com/explore/tags/generativeart/) on Instagram
+- [#creativecoding](https://www.instagram.com/explore/tags/creativecoding/) on Instagram
+
 If you want more sketches to play around with, you could go to my [main repository](https://github.com/plusk/generative-processing), but keep in mind that not all the sketches therein are completed, documented, or even functional.
