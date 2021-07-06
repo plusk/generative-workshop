@@ -39,7 +39,7 @@ Specific artists:
 - [geometrieva](https://www.instagram.com/geometrieva.stuff/)
 
 General inspo pages:
-- [/r/generative](Reddit) on Reddit
+- [/r/generative](https://www.reddit.com/r/generative/top/?t=all) on Reddit
 - [#generativeart](https://www.instagram.com/explore/tags/generativeart/) on Instagram
 - [#creativecoding](https://www.instagram.com/explore/tags/creativecoding/) on Instagram
 
