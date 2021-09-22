@@ -1,3 +1,7 @@
+## Web version (work in progress)
+
+https://editor.p5js.org/plusk/sketches/fiG373hTv
+
 ## Setup
 
 First you need the files for the workshop, which you can get by clicking the greeen "Code" dropdown and selecting "Download ZIP". After the folder is finished downloading, unzip the folder and open a terminal of your choice. Verify that you have npm installed by running `npm -v`. If npm is installed, simply run `npm install`, and when that is finished, run `npm start`. Your browser should now pop up on http://localhost:3000/, and the sketch will automatically refresh when you change the code!
